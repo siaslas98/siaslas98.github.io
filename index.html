@@ -6,14 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=`, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel= "stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/968f9e884e.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
    <header>
-        <h1 id="portfolio">Portfolio</h1></a>
+        <h1>Portfolio</h1></a>
         <nav>
             <ul> 
                 <li><a href="#about">About</a></li>
@@ -23,43 +23,74 @@
         </nav> 
    </header>
 
+   <hr>
+
    <main> 
         <section>
             <div class="container" id="about">
                 <h2>About Me</h2>
-                <img id="profile-pic" src="assets/me.jpg">
-                <p>
 
-                    Hi, my name is Tre! I am currently studying Computer Science at the
+                <div class="innerContainerCont">
+                    <img id="profile-pic" src="assets/me.jpg">
+                    <p>
+                        <b id="greeting">Tre Huang</b></br><br>
+                        I am currently studying Computer Science at the
 
-                    University of Florida Online. I am interested in Artificial Intelligence and Cybersecurity.
+                        University of Florida Online. My goal is to work in the field of
 
-                    My goal is to work in these areas in the future. Some of my hobbies include: learning about
+                        Artificial Intelligence and/or Cybersecurity. For fun, I like learning
 
-                    algorithms, solving Leetcode problems, playing chess, and when possible cooking.
+                        about Algorithms, solving Leetcode challenges, playing Chess, and whenever possible
 
-                </p>
-                <div id="myLinks">
-                    <div class = "icons" id="Github"><a href="https://github.com/siaslas98" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github fa-3x"></i></a></div><br>
-                    <div class = "icons" id="Linkedin"><a href="https://www.linkedin.com/in/tre-huang-20862a218/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin fa-3x"></i></a></div>
+                        cooking.
+
+                    </p>
+                </div>
+
+                <div class="innerContainerLinks">
+                    <div class="icons" id="Github"><a href="https://github.com/siaslas98" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github fa-3x"></i></a></div><br>
+                    <div class="icons" id="Linkedin"><a href="https://www.linkedin.com/in/tre-huang-20862a218/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin fa-3x"></i></a></div>
                 </div>
             </div>
         </section>
 
+        <hr>
+
         <section>
-            <div class="container">
-                <h2 id="projects">Projects</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, molestiae repellendus fugiat sed delectus voluptatibus eius doloremque placeat rerum possimus similique ea, iste provident reprehenderit necessitatibus neque, quos beatae saepe.</p>
+            <div class="container" id="projects">
+                <h2>Projects</h2>
+                <ul id="projectList">
+                    <li>
+                        <a href="https://github.com/siaslas98/Portfolio" target="_blank">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/siaslas98/Snake" target="_blank">Snake</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/siaslas98/MergeVsHeapSort" target="_blank">Timsort Vs Heapsort</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/siaslas98/Hangman" target="_blank">Hangman</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/siaslas98/AVL-Tree" target="_blank">AVL-Tree</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/siaslas98/SinglyLinkedList" target="_blank">SinglyLinkedList</a>
+                    </li>
+                </ul>
             </div>
         </section>
-        
+
+        <hr>
+
         <section>
             <div class="container">
                 <h2 id="contact">Contact</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati ad, ipsa aliquam beatae nulla voluptate consectetur id iste corrupti numquam hic, explicabo aut aspernatur ipsum. Ipsam et praesentium facilis distinctio.</p>
+                <a href="mailto:huang.treanthony@gmail.com"><i class="fa-solid fa-envelope fa-6x" id="myEnvelope"></i></a>
             </div>
         </section>
    </main>
-</body>
 
-</html></html>
+</body>
+</html>
