@@ -1,183 +1,226 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    scroll-margin-top: 200px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-margin-top: 200px;
 }
 
-body{
-    font-family: 'Poppins';
-    background-color: rgb(49, 52, 49);
+body {
+  font-family: "Poppins";
+  background-color: rgb(49, 52, 49);
 }
 
 /* Begin Header */
-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
-h1{
-    margin: 30px 40px;
+h1 {
+  margin: 30px 40px;
 }
 
-h1, h2{ 
-    color: rgb(51, 153, 137);
-    border-bottom: 5px solid rgb(78, 190, 173);
+h1,
+h2 {
+  color: rgb(51, 153, 137);
+  border-bottom: 5px solid rgb(78, 190, 173);
 }
 
-nav{
-    margin-right: 150px;
+nav {
+  margin-right: 150px;
 }
 
-nav ul{
-    display: flex;
-    list-style: none;
-    gap: 15px;
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 15px;
 }
 
-nav a{
-    text-decoration: none;
-    color: rgb(51, 153, 137);
-    font-size: 1.2em;
+nav a {
+  text-decoration: none;
+  color: rgb(51, 153, 137);
+  font-size: 1.2em;
 }
 
-nav a:hover{
-    border-bottom: 4px solid rgb(78, 190, 173);
-    padding-bottom: 3px;
+nav a:hover {
+  border-bottom: 4px solid rgb(78, 190, 173);
+  padding-bottom: 3px;
 }
 /* End Header */
 
 /* Begin Main */
-section{
-    min-height: 100vh;
+section {
+  min-height: 100vh;
 }
 
 /* General Section */
 .container {
-    margin: 0 auto;
-    padding: 100px;
-    text-align: center;
+  margin: 0 auto;
+  padding: 100px;
+  text-align: center;
 }
 
-h2{
-    margin-left: auto;
-    margin-right: auto; 
-    margin-bottom: 40px;
-    width: fit-content;
+h2 {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  width: fit-content;
 }
 
 /* About section */
 
-.innerContainerCont{
-    display: flex;
-    align-items: flex-start;
-    max-width: 75%; /* 75% of parent */
-    margin: 100px auto;
+.innerContainerCont {
+  display: flex;
+  align-items: flex-start;
+  max-width: 75%; /* 75% of parent */
+  margin: 100px auto;
 }
 
-
-#profile-pic{
-    flex: 0 0 auto;
-    width: 300px;
-    height: 300px;
-    margin-top: 15px;
-    margin-right: 30px;
-    border-radius: 85%; 
-    object-fit: cover;
-    box-shadow: 10px 10px 10px #000000;
+#profile-pic {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 300px;
+  margin-top: 15px;
+  margin-right: 30px;
+  border-radius: 85%;
+  object-fit: cover;
+  box-shadow: 10px 10px 10px #000000;
 }
 
-.innerContainerCont p::first-line{
-    color: rgb(215, 235, 186);
-    font-size: 2em;
-    word-spacing: 5px;
+.innerContainerCont p::first-line {
+  color: rgb(215, 235, 186);
+  font-size: 2em;
+  word-spacing: 5px;
 }
 
 .innerContainerCont p {
-    flex: 1 1 auto;
-    line-height: 3em;
-    font-size: 1.2em;
-    text-align: left;
+  flex: 1 1 auto;
+  line-height: 3em;
+  font-size: 1.2em;
+  text-align: left;
 }
 
-.innerContainerLinks{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
+.innerContainerLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 
 .icons {
-    flex: 0 0 auto;
-    margin: 0;
+  flex: 0 0 auto;
+  margin: 0;
 }
 
 .innerContainerLinks a {
-    color: inherit;           /* use the parent’s color */
-    text-decoration: none;    /* drop the underline */
+  color: inherit; /* use the parent’s color */
+  text-decoration: none; /* drop the underline */
 }
 
-.innerContainerLinks a:hover{
-    color: rgb(78, 190, 173);
+.innerContainerLinks a:hover {
+  color: rgb(78, 190, 173);
 }
 
 /* Projects */
 
-#projects{
-    max-width: 1000px;
+#projects {
+  max-width: 1000px;
 }
 
 /* Unordered list */
-#projectList{
-    display: flex;
-    flex-wrap: wrap;
+#projectList {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #projectList > li {
-    display: flex;
-    flex: 0 0 calc(33% - 10px);
-    list-style: none;
-    justify-content: center; /* ← center horizontally */
-    align-items: center; /* ← center vertically */
-    height: 250px;
-    width: 250px;
-    margin: 5px;
-    border-radius: 10px;
-    border: 5px solid rgb(221, 219, 203);
+  display: flex;
+  flex: 0 0 calc(33% - 10px);
+  list-style: none;
+  justify-content: center; /* ← center horizontally */
+  align-items: center; /* ← center vertically */
+  height: 250px;
+  width: 250px;
+  margin: 5px;
+  border-radius: 10px;
+  border: 5px solid rgb(221, 219, 203);
 }
 
-#projectList > li > a{
-    position: relative;
-    text-decoration: none;
-    color: rgb(245, 241, 227);
-    font-size: 1.2em;
-    margin: 0 10px;
-    padding-bottom: .4em;
+#projectList > li > a {
+  position: relative;
+  text-decoration: none;
+  color: rgb(245, 241, 227);
+  font-size: 1.2em;
+  margin: 0 10px;
+  padding-bottom: 0.4em;
 }
 
-#projectList > li > a:hover::after{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 25%;
-    height: 5px;
-    width: 50%;
-    background: rgb(78, 190, 173);;
+#projectList > li > a:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  height: 5px;
+  width: 50%;
+  background: rgb(78, 190, 173);
 }
 
-#myEnvelope{
-    text-decoration: none;
-    color: whitesmoke;
+#myEnvelope {
+  text-decoration: none;
+  color: whitesmoke;
 }
 
-#myEnvelope:hover{
-    color:rgb(23, 90, 59);
+#myEnvelope:hover {
+  color: rgb(23, 90, 59);
+}
+
+#contact {
+  transform: translateX(-300px); /* slight left shift of center */
+}
+
+#contactForm {
+  width: 300px;
+  margin: 0 auto;
+  font-size: 1.4em;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+input,
+textarea {
+  width: 300px;
+  resize: both;
+  font-family: inherit;
+  font-size: 0.6em;
+  line-height: 1.4;
+  border-radius: 5px;
+  padding: 0.4em 0.6em;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.submit-button {
+  padding: 10px;
+  border-radius: 5px;
 }
 
 /* End Main */
