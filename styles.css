@@ -1,3 +1,4 @@
+/* General */
 * {
   margin: 0;
   padding: 0;
@@ -11,19 +12,18 @@ body {
   background-color: rgb(49, 52, 49);
 }
 
-/* Begin Header */
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
   position: sticky;
-  top: 0;
   z-index: 10;
+  padding: 2em 4em;
+  top: 0;
 }
 
-h1 {
-  margin: 30px 40px;
+section {
+  min-height: 100vh;
 }
 
 h1,
@@ -32,90 +32,74 @@ h2 {
   border-bottom: 5px solid rgb(78, 190, 173);
 }
 
+h2 {
+  margin: 0 auto 40px auto;
+  width: fit-content;
+}
+
 nav {
-  margin-right: 150px;
+  margin-right: 100px;
 }
 
 nav ul {
   display: flex;
   list-style: none;
-  gap: 15px;
+  gap: 3em;
 }
 
 nav a {
   text-decoration: none;
-  color: rgb(51, 153, 137);
   font-size: 1.2em;
+  color: rgb(51, 153, 137);
 }
 
 nav a:hover {
-  border-bottom: 4px solid rgb(78, 190, 173);
   padding-bottom: 3px;
-}
-/* End Header */
-
-/* Begin Main */
-section {
-  min-height: 100vh;
+  border-bottom: 4px solid rgb(78, 190, 173);
 }
 
-/* General Section */
+hr {
+  height: 2px;
+  width: 80%;
+  background: linear-gradient(to right, #58508d, #b5bad0);
+  border: none;
+}
+
+/* Classes */
+
 .container {
   margin: 0 auto;
   padding: 100px;
   text-align: center;
 }
 
-h2 {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 40px;
-  width: fit-content;
-}
-
-/* About section */
-
-.innerContainerCont {
+.innerContainer {
   display: flex;
   align-items: flex-start;
+  gap: 2rem;
   max-width: 75%; /* 75% of parent */
   margin: 100px auto;
 }
 
-#profile-pic {
-  flex: 0 0 auto;
-  width: 300px;
-  height: 350px;
-  margin-top: 15px;
-  margin-right: 30px;
-  border-radius: 5%;
-  object-fit: cover;
-  box-shadow: 5px 5px 5px #000000;
+.innerContainer p::first-line {
+  font-size: 1.75em;
+  word-spacing: 2px;
+  color: #b5bad0;
 }
 
-.innerContainerCont p::first-line {
-  color: rgb(215, 235, 186);
-  font-size: 2em;
-  word-spacing: 5px;
-}
-
-.innerContainerCont p {
+.innerContainer p {
   flex: 1 1 auto;
-  line-height: 3em;
+  max-width: 60ch;
+  line-height: 2em;
   font-size: 1.2em;
   text-align: left;
 }
 
-.emoji {
-  margin-left: 15px;
-  font-size: 50px;
-}
-
-.innerContainerLinks {
+.myLinksContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
 }
 
 .icons {
@@ -123,16 +107,46 @@ h2 {
   margin: 0;
 }
 
-.innerContainerLinks a {
+.myLinksContainer a {
   color: inherit; /* use the parent’s color */
   text-decoration: none; /* drop the underline */
 }
 
-.innerContainerLinks a:hover {
+.myLinksContainer a:hover {
   color: rgb(78, 190, 173);
 }
 
-/* Projects */
+.description {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0 10px;
+  font-size: 1em;
+}
+
+.projectLogos {
+  padding-top: 30px;
+}
+
+.techIcons {
+  width: 50px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+/* ID */
+#profile-pic {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 375px;
+  border-radius: 5%;
+  object-fit: cover;
+  box-shadow: 5px 5px 5px #b5bad0;
+}
 
 #projects {
   position: relative;
@@ -151,9 +165,9 @@ h2 {
   display: flex;
   flex-direction: column;
   flex: 0 0 calc((100% - 2 * 0.8rem) / 3);
-  list-style: none;
   height: 300px;
   position: relative;
+  list-style: none;
   border-radius: 10px;
   background: linear-gradient(
     145deg,
@@ -164,28 +178,13 @@ h2 {
 }
 
 #projectList > li > h4 {
-  color: rgb(245, 241, 227);
-  font-size: 1.2em;
+  align-self: flex-start;
   height: fit-content;
   padding-top: 10px;
   padding-left: 10px;
-  align-self: flex-start;
+  font-size: 1.2em;
+  color: rgb(245, 241, 227);
   border-bottom: 3px solid rgb(78, 190, 173);
-}
-
-.description {
-  font-size: 1em;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 0 10px;
-}
-
-.projectLogos {
-  padding-top: 30px;
-}
-
-.techIcons {
-  width: 50px;
 }
 
 #contact {
@@ -193,21 +192,14 @@ h2 {
 }
 
 #contactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
   font-size: 1.4em;
   overflow: visible;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 20px;
 }
 
 input,
