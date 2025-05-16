@@ -135,45 +135,57 @@ h2 {
 /* Projects */
 
 #projects {
-  max-width: 1000px;
+  position: relative;
+  max-width: 1800px;
 }
 
 /* Unordered list */
 #projectList {
   display: flex;
   flex-wrap: wrap;
+  padding-top: 80px;
+  gap: 0.8rem;
 }
 
 #projectList > li {
   display: flex;
-  flex: 0 0 calc(33% - 10px);
+  flex-direction: column;
+  flex: 0 0 calc((100% - 2 * 0.8rem) / 3);
   list-style: none;
-  justify-content: center; /* ← center horizontally */
-  align-items: center; /* ← center vertically */
-  height: 250px;
-  width: 250px;
-  margin: 5px;
+  height: 300px;
+  position: relative;
   border-radius: 10px;
-  border: 5px solid rgb(221, 219, 203);
+  background: linear-gradient(
+    145deg,
+    rgb(49, 52, 49),
+    rgb(67, 72, 67),
+    rgb(88, 94, 88)
+  );
 }
 
-#projectList > li > a {
-  position: relative;
-  text-decoration: none;
+#projectList > li > h4 {
   color: rgb(245, 241, 227);
   font-size: 1.2em;
-  margin: 0 10px;
-  padding-bottom: 0.4em;
+  height: fit-content;
+  padding-top: 10px;
+  padding-left: 10px;
+  align-self: flex-start;
+  border-bottom: 3px solid rgb(78, 190, 173);
 }
 
-#projectList > li > a:hover::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 25%;
-  height: 5px;
-  width: 50%;
-  background: rgb(78, 190, 173);
+.description {
+  font-size: 1em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+.projectLogos {
+  padding-top: 30px;
+}
+
+.techIcons {
+  width: 50px;
 }
 
 #contact {
@@ -181,7 +193,8 @@ h2 {
 }
 
 #contactForm {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   margin: 0 auto;
   font-size: 1.4em;
   overflow: visible;
@@ -199,7 +212,8 @@ h2 {
 
 input,
 textarea {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   resize: both;
   font-family: inherit;
   font-size: 0.6em;
@@ -244,3 +258,60 @@ footer {
   padding-bottom: 25px;
 }
 /* End Main */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 40px 20px;
+  }
+
+  .innerContainerCont {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    margin: 40px auto;
+  }
+
+  #profile-pic {
+    width: 90%;
+    height: auto;
+    margin: 0 auto 20px;
+  }
+
+  .innerContainerCont p {
+    font-size: 1em;
+    text-align: center;
+    line-height: 1.8em;
+  }
+
+  #projectList {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+  }
+
+  #projectList > li {
+    flex: 0 0 90%;
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  #contactForm,
+  input,
+  textarea {
+    width: 100%;
+  }
+
+  #contact {
+    transform: translateX(0); /* undo left shift */
+  }
+
+  nav {
+    margin-right: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
