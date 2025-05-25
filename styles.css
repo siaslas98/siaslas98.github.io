@@ -139,6 +139,10 @@ hr {
 }
 
 /* ID */
+#menu-toggle {
+  display: none;
+}
+
 #profile-pic {
   flex: 0 0 auto;
   width: 300px;
@@ -262,9 +266,20 @@ footer {
   }
 
   nav ul {
+    display: none;
     flex-direction: column;
-    gap: 1em;
-    align-items: center;
+  }
+
+  #menu-toggle {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+  }
+
+  nav.active ul {
+    display: flex;
+    flex-direction: column;
   }
 
   .innerContainer {
