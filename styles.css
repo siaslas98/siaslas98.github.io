@@ -9,7 +9,7 @@
 
 body {
   font-family: "Poppins";
-  background-color: rgb(49, 52, 49);
+  background-color: hsla(215, 60%, 4%, 0.9);
 }
 
 header {
@@ -28,8 +28,8 @@ section {
 
 h1,
 h2 {
-  color: rgb(51, 153, 137);
-  border-bottom: 5px solid rgb(78, 190, 173);
+  color: #B8F3FF;
+  border-bottom: 5px solid #b1e4ee;
 }
 
 h2 {
@@ -50,19 +50,12 @@ nav ul {
 nav a {
   text-decoration: none;
   font-size: 1.2em;
-  color: rgb(51, 153, 137);
+  color: #9590A8;
 }
 
 nav a:hover {
   padding-bottom: 3px;
-  border-bottom: 4px solid rgb(78, 190, 173);
-}
-
-hr {
-  height: 2px;
-  width: 80%;
-  background: linear-gradient(to right, #58508d, #b5bad0);
-  border: none;
+  border-bottom: 4px solid #6b6e79;
 }
 
 /* Classes */
@@ -76,15 +69,10 @@ hr {
 .innerContainer {
   display: flex;
   align-items: flex-start;
+  justify-content: center;
   gap: 2rem;
   max-width: 75%; /* 75% of parent */
   margin: 100px auto;
-}
-
-.innerContainer p::first-line {
-  font-size: 1.75em;
-  word-spacing: 2px;
-  color: #b5bad0;
 }
 
 .innerContainer p {
@@ -113,7 +101,7 @@ hr {
 }
 
 .myLinksContainer a:hover {
-  color: rgb(78, 190, 173);
+  color: #01BAEF;
 }
 
 .description {
