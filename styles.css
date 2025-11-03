@@ -278,12 +278,17 @@ footer {
   }
 
   .innerContainer p {
-    text-align: center;
+    text-align: left;
   }
 
   .project-cards{
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
   }
 
+  .card{
+    width: fit-content;
+    height: auto;
+    font-size: 0.6rem;
+  }
 }
