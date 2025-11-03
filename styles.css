@@ -1,4 +1,4 @@
-/* General */
+
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +10,7 @@
 body {
   font-family: "Poppins";
   background-color: hsla(215, 60%, 4%, 0.9);
+  color: white;
 }
 
 header {
@@ -53,12 +54,19 @@ nav a {
   color: #9590A8;
 }
 
-nav a:hover {
-  padding-bottom: 3px;
-  border-bottom: 4px solid #6b6e79;
+nav a:after {
+  transition: all ease-in-out .2s;
+  background: none repeat scroll 0 0 #9590A8;
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
 }
 
-/* Classes */
+nav a:hover:after {
+  width: 100%;
+}
+
 
 .container {
   margin: 0 auto;
@@ -126,7 +134,7 @@ nav a:hover {
   margin-bottom: 20px;
 }
 
-/* ID */
+
 #menu-toggle {
   display: none;
 }
@@ -141,75 +149,80 @@ nav a:hover {
 }
 
 #projects {
-  position: relative;
-  max-width: 1800px;
-}
-
-/* Unordered list */
-#projectList {
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 80px;
-  gap: 0.8rem;
-}
-
-#projectList > li {
   display: flex;
   flex-direction: column;
-  flex: 0 0 calc((100% - 2 * 0.8rem) / 3);
-  height: 300px;
-  position: relative;
-  list-style: none;
-  border-radius: 10px;
-  background: linear-gradient(
-    145deg,
-    rgb(49, 52, 49),
-    rgb(67, 72, 67),
-    rgb(88, 94, 88)
-  );
 }
 
-#projectList > li > h4 {
-  align-self: flex-start;
-  height: fit-content;
-  padding-top: 10px;
-  padding-left: 10px;
-  font-size: 1.2em;
-  color: rgb(245, 241, 227);
-  border-bottom: 3px solid rgb(78, 190, 173);
-}
-
-#contact {
-  transform: translateX(-300px); /* slight left shift of center */
-}
-
-#contactForm {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
-  max-width: 500px;
+.project-cards{
   margin: 0 auto;
-  font-size: 1.4em;
-  overflow: visible;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 }
 
-input,
-textarea {
-  width: 100%;
-  max-width: 500px;
-  resize: both;
-  font-family: inherit;
-  font-size: 0.6em;
-  line-height: 1.4;
-  border-radius: 5px;
-  padding: 0.4em 0.6em;
+.card {
+  width: 500px;
+  height: 500px;
+  border-radius: 3%;
+  border: 2px solid #B8F3FF;
+  /* background: linear-gradient(to bottom right, hsl(240, 31%, 75%), pink); */
+  font-size: 1.1rem;
+  padding: 20px;
+  margin: 10px;
+  transition: transform 0.5s ease; 
 }
 
-input:focus,
-textarea:focus {
-  outline: none;
-  box-shadow: none;
+.card:hover {
+  transform: scale(1.1);
+}
+
+.project-header {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.project-paragraph{
+  text-align: left;
+  margin: 10px;
+}
+
+.project-tech-stack ul{
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  flex-flow: row wrap;
+}
+
+.project-tech-stack li{
+  padding-top: 10px;
+  flex: 1 100px;
+}
+
+.project-link{
+  padding: 10px;
+  margin: 30px auto;
+  border: 1px solid #B8F3FF;
+  border-radius: 5%;
+  width: 200px;
+}
+
+.project-link a{
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  padding: 10px;
+}
+
+.testing-grid{
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.testing-grid div{
+  border: 2px solid black;
 }
 
 button {
@@ -222,18 +235,6 @@ button {
 
 button:hover {
   background-color: hsl(0, 2%, 48%); /* same as default to suppress change */
-}
-
-#thankYouMessage {
-  display: none;
-  color: rgb(78, 190, 173);
-  font-size: 0.8em;
-  margin-top: 20px;
-}
-
-.submit-button {
-  padding: 10px;
-  border-radius: 5px;
 }
 
 footer {
@@ -280,28 +281,9 @@ footer {
     text-align: center;
   }
 
-  #projectList > li {
-    flex: 0 0 100%;
-    height: auto;
-    padding-bottom: 20px;
+  .project-cards{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
   }
 
-  #projectList {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #contactForm {
-    font-size: 1em;
-    padding: 0 1em;
-  }
-
-  .form-group {
-    width: 100%;
-  }
-
-  input,
-  textarea {
-    font-size: 1em;
-  }
 }

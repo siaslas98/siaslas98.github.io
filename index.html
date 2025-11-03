@@ -23,7 +23,6 @@
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -41,11 +40,8 @@
               maintain scalable web applications.<br /><br />
 
               Outside of work I love to play strategic games like chess,
-              running, and cooking! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Blanditiis accusantium, perspiciatis pariatur voluptatem ipsa
-              suscipit alias ducimus dolore, quaerat commodi eum cum, beatae nihil corporis. Obcaecati reprehenderit enim error optio?
+              running, and cooking!
             </p>
-            <br />
           </div>
 
           <div class="myLinksContainer">
@@ -71,116 +67,44 @@
       </section>
 
       <section>
+
         <div class="container" id="projects">
           <h2>Projects</h2>
-          <ul id="projectList">
-            <li style="background-color: rgb(219, 140, 140)">
-              <h4>Portfolio</h4>
-              <p class="description">
-                Portfolio built using HTML, CSS, and Javascript.
-              </p>
-              <div class="projectLogos">
-                <img
-                  src="assets/html5-color.svg"
-                  alt="html5 logo"
-                  class="techIcons"
-                />
-                <img
-                  src="assets/css3-color.svg"
-                  alt="css3 logo"
-                  class="techIcons"
-                />
-                <img
-                  src="assets/javascript-color.svg"
-                  alt="javascript logo"
-                  class="techIcons"
-                />
+          <div class="project-cards">
+
+            <div class="card">
+              <p class="project-header">Aspire Link</p>
+              <p class="project-paragraph">Internship Support Tool for Computer Science students searching for internships through gamified checkins, watchlist, and a notification system.</p>
+              <div class="project-tech-stack">
+                <ul>
+                  <li>Python</li>
+                  <li>FastAPI</li>
+                  <li>SQLAlchemy</li>
+                  <li>Jinja2</li>
+                </ul>
+                <div class="project-link">
+                  <a
+                    href="https://github.com/siaslas98/AspireLink"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                  <i class="fa-brands fa-github fa-2x"> </i>
+                 </a>
+                </div>
               </div>
-            </li>
-            <li>
-              <h4>Web Server</h4>
-              <p class="description">
-                Python web server implementing both static and dynamic content
-                retrieval functionalities.
-              </p>
-              <div class="projectLogos">
-                <img
-                  src="assets/python-color.svg"
-                  alt="python logo"
-                  class="techIcons"
-                />
-              </div>
-            </li>
-            <li>
-              <h4>AVL-Tree</h4>
-              <p class="description">
-                Self-balancing binary search tree implemented in C++.
-              </p>
-              <div class="projectLogos">
-                <img
-                  src="assets/cmake-color.svg"
-                  alt="cmake logo"
-                  class="techIcons"
-                />
-                <img
-                  src="assets/cplusplus-color.svg"
-                  alt="c plus plus logo"
-                  class="techIcons"
-                />
-              </div>
-            </li>
-          </ul>
+            </div>
+
+            <div class="card">
+              <p class="project-header">Cooks-Match</p>
+              <p class="project-paragraph">Receipt Ingredients to Recipes Generator</p>
+            </div>
+            <div class="card">
+              <p class="project-header">AVL-Tree</h3>
+              <p class="project-paragraph">Implementation of a self balancing binary search tree</p>
+            </div>
+          </div>
         </div>
-      </section>
 
-      <section>
-        <div class="container">
-          <h2 id="contact">Contact</h2>
-          <form
-            id="contactForm"
-            action="https://formspree.io/f/mrbqaodb"
-            method="POST"
-          >
-            <div class="form-group">
-              <label for="name" class="contactLabels">Name</label><br />
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Your Name"
-                required
-              />
-              <span class="error-message" id="nameError"></span>
-            </div>
-
-            <div class="form-group">
-              <label for="email" class="contactLabels">Email</label><br />
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Your Email"
-                required
-              />
-              <span class="error-message" id="emailError"></span>
-            </div>
-
-            <div class="form-group">
-              <label for="message" class="contactLabels">Message</label><br />
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Your Message"
-                rows="5"
-                required
-              ></textarea>
-              <span class="error-message" id="messageError"></span>
-            </div>
-
-            <button type="submit" class="submit-button">Send Message</button>
-            <p id="thankYouMessage">Thank you! Your message was sent.</p>
-          </form>
-        </div>
       </section>
     </main>
     <footer><p>&copy Tre Huang, 2025</p></footer>
