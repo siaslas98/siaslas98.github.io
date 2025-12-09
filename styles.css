@@ -62,7 +62,7 @@ h2:hover::after {
 /* Nav-bar */
 
 .desktop-nav {
-  margin-right: 100px;
+  margin-right: 10rem;
 }
 
 .desktop-nav ul {
@@ -171,7 +171,7 @@ h2:hover::after {
 
 .container {
   margin: 0 auto;
-  padding: 8rem;
+  padding: 4rem;
   text-align: center;
 }
 
@@ -180,16 +180,14 @@ h2:hover::after {
 .innerContainer {
   display: flex;
   align-items: flex-start;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-  max-width: 75%; 
   margin: 5rem auto;
+  max-width: 900px;
 }
 
 #profile-pic {
-  flex: 0 1 auto;
-  width: clamp(150px, 25vw, 300px);
+  width: clamp(150px, 30vw, 300px);
   height: auto;
   border-radius: 5%;
   object-fit: cover;
@@ -197,7 +195,7 @@ h2:hover::after {
 }
 
 .innerContainer p {
-  flex: 1 1 300px;
+  flex: 1;
   max-width: 60ch;
   font-size: clamp(0.2rem, 1.3vw + 0.5rem, 1.2rem);
   line-height: 1.7rem;

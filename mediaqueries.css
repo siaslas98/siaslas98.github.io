@@ -1,8 +1,9 @@
-@media (max-width: 1000px){
+@media (max-width: 1110px){
   .innerContainer{
     flex-direction: column;
     align-items: center;
   }
+
   .desktop-nav {
     display: none;
   }
@@ -15,26 +16,26 @@
 @media (max-width: 768px) {
   header {
     flex-direction: column;
-    gap: 1em;
-    padding: 1em;
-  }
-
-  nav {
-    margin: 0;
-  }
-
-  nav ul {
-    display: none;
-    flex-direction: column;
-  }
-
-  nav.active ul {
-    display: flex;
-    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
   }
 
   .innerContainer {
-    max-width: 90%;
+    width: 100%;
+    max-width: 95%;
+    padding: 0 1rem;
+  }
+
+  #profile-pic {
+    width: clamp(120px, 50vw, 220px);
+    height: auto;
+  }
+
+  .innerContainer p {
+    flex: 1 1 auto;
+    max-width: 100%;   /* let it take the full width */
+    font-size: clamp(0.95rem, 1vw + 0.6rem, 1.2rem); /* slightly larger on small screens */
+    line-height: 1.6;
   }
 
   .fa-3x {
@@ -60,3 +61,29 @@
     font-size: 0.9rem;
   } */
 }
+
+@media (max-width: 480px) {
+  #profile-pic {
+    width: clamp(120px, 50vw, 180px);
+    height: auto;
+  }
+
+  .innerContainer p {
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+}
+
+@media (max-width: 344px){
+  #profile-pic {
+    width: clamp(140px, 30vw, 180px);
+    height: auto;
+  }
+
+  .innerContainer p {
+    font-size: 0.7rem;
+    line-height: 1.65;
+  }
+}
+
+ 
