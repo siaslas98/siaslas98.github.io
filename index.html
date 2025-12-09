@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tre Huang</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="mediaqueries.css">
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -17,12 +18,12 @@
 
   <body>
     <header>
-      <h1>Portfolio</h1>
-      <button id="menu-toggle">&#9776;</button>
+      <h1>Portfolio</h1>  
       <nav>
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#blog">Blog</a></li>
         </ul>
       </nav>
     </header>
@@ -34,12 +35,17 @@
             <img id="profile-pic" src="assets/me.jpg" />
             <p>
               Hello, my name is Tre and I'm currently studying Computer Science
-              at the University of Florida. My goal is to work in Full Stack
-              Development and utilize both my attention to detail and
+              at the University of Florida. My goal is to become a backend software
+              engineer and utilize both my attention to detail and
               problem-solving skills to help companies build, deploy, and
               maintain scalable web applications.<br /><br />
 
-              Outside of work I love to play strategic games like chess,
+              I'm currently building a minimal chess engine in Python that includes a
+              board representation and alpha-beta pruning. This project highlights my
+              understanding of object-oriented programming and algorithmic problem-solving,
+              both of which are valuable in backend development.<br /><br />
+
+              Outside of work I also enjoy playing strategic games like chess,
               running, and cooking!
             </p>
           </div>
@@ -109,3 +115,7 @@
     <script src="script.js"></script>
   </body>
 </html>
+
+<!-- Oraganize CSS, move media queries to separate page-->
+<!-- Add class desktop-nav and hamburger-nav to distinguish between desktop and mobile -->
+<!-- Make everything more responsive-->
