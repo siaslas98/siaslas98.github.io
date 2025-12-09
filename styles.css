@@ -12,7 +12,7 @@ html {
 body {
   font-family: "Poppins";
   background-color: hsla(215, 60%, 4%, 0.9);
-  color: white;
+  color: whitesmoke;
 }
 
 header {
@@ -40,6 +40,7 @@ h1 {
 
 h2 {
   color: #B8F3FF;
+  font-size: clamp(1.2rem, 2vw + 0.5rem, 1.5rem);
 }
 
 h2::after {
@@ -60,23 +61,23 @@ h2:hover::after {
 
 /* Nav-bar */
 
-nav {
+.desktop-nav {
   margin-right: 100px;
 }
 
-nav ul {
+.desktop-nav ul {
   display: flex;
   list-style: none;
   gap: 3em;
 }
 
-nav a {
+.desktop-nav a {
   text-decoration: none;
   font-size: 1.2em;
   color: #9590A8;
 }
 
-nav a:after {
+.desktop-nav a:after {
   content: "";
   display: block;
   height: 2px;
@@ -85,8 +86,87 @@ nav a:after {
   transition: all ease-in-out .2s;
 }
 
-nav a:hover:after {
+.desktop-nav a:hover:after {
   width: 100%;
+}
+
+/* Hamburger nav */
+.hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: whitesmoke;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: whitesmoke;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
 }
 
 .container {
@@ -100,6 +180,7 @@ nav a:hover:after {
 .innerContainer {
   display: flex;
   align-items: flex-start;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
   max-width: 75%; 
@@ -107,19 +188,19 @@ nav a:hover:after {
 }
 
 #profile-pic {
-  flex: 0 0 auto;
-  width: 300px;
-  height: 375px;
+  flex: 0 1 auto;
+  width: clamp(150px, 25vw, 300px);
+  height: auto;
   border-radius: 5%;
   object-fit: cover;
   box-shadow: 5px 5px 5px #b5bad0;
 }
 
 .innerContainer p {
-  flex: 1 1 auto;
+  flex: 1 1 300px;
   max-width: 60ch;
-  font-size: clamp(0.8rem, 1.3vw + 0.5rem, 1.2rem);
-  line-height: 2rem;
+  font-size: clamp(0.2rem, 1.3vw + 0.5rem, 1.2rem);
+  line-height: 1.7rem;
   text-align: left;
 }
 
@@ -214,6 +295,8 @@ nav a:hover:after {
   text-align: left;
   padding: 10px;
 }
+
+/* Footer section */
 
 footer {
   width: fit-content;

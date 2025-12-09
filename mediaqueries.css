@@ -3,6 +3,13 @@
     flex-direction: column;
     align-items: center;
   }
+  .desktop-nav {
+    display: none;
+  }
+
+  .hamburger-nav{
+    display: flex;
+  }
 }
 
 @media (max-width: 768px) {
@@ -21,22 +28,9 @@
     flex-direction: column;
   }
 
-  #menu-toggle {
-    display: block;
-    font-size: 2rem;
-    background: none;
-    border: none;
-  }
-
   nav.active ul {
     display: flex;
     flex-direction: column;
-  }
-
-  #profile-pic{
-    width: 70%;
-    max-width: 300px;
-    height: auto;
   }
 
   .innerContainer {
@@ -48,7 +42,7 @@
   }
 
   /* Projects section */
-  .project-cards{
+  /* .project-cards{
     grid-template-columns: 1fr;
     grid-auto-rows: minmax(250px, auto);
   }
@@ -64,5 +58,5 @@
 
   .project-header{
     font-size: 0.9rem;
-  }
+  } */
 }

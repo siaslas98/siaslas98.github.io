@@ -19,12 +19,26 @@
   <body>
     <header>
       <h1>Portfolio</h1>  
-      <nav>
+      <nav class="desktop-nav">
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#blog">Blog</a></li>
         </ul>
+      </nav>
+      <nav class="hamburger-nav">
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu-links">
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#blog" onclick="toggleMenu()">Blog </a></li>
+          </div>
+        </div>
       </nav>
     </header>
       <main>
@@ -35,15 +49,15 @@
             <img id="profile-pic" src="assets/me.jpg" />
             <p>
               Hello, my name is Tre and I'm currently studying Computer Science
-              at the University of Florida. My goal is to become a backend software
-              engineer and utilize both my attention to detail and
-              problem-solving skills to help companies build, deploy, and
-              maintain scalable web applications.<br /><br />
+              at the University of Florida. My goal is to become a 
+              backend software engineer and utilize both my attention 
+              to detail and problem-solving skills to help companies build, 
+              deploy, and maintain scalable web applications.<br /><br />
 
               I'm currently building a minimal chess engine in Python that includes a
               board representation and alpha-beta pruning. This project highlights my
-              understanding of object-oriented programming and algorithmic problem-solving,
-              both of which are valuable in backend development.<br /><br />
+              understanding of object-oriented programming and algorithmic 
+              problem-solving, both of which are valuable in backend development.<br /><br />
 
               Outside of work I also enjoy playing strategic games like chess,
               running, and cooking!
@@ -71,7 +85,7 @@
         </div>
       </section>
 
-      <section>
+      <!-- <section>
         <div class="container" id="projects">
           <h2>Projects</h2>
           <div class="project-cards">
@@ -109,13 +123,12 @@
             </div>
           </div>
         </div>
-      </section> 
+      </section>  -->
     </main>
     <footer><p>&copy; 2025 Tre Huang - Made with <i class="fa-solid fa-heart fa-bounce heart"></i></p></footer>
     <script src="script.js"></script>
   </body>
 </html>
 
-<!-- Oraganize CSS, move media queries to separate page-->
 <!-- Add class desktop-nav and hamburger-nav to distinguish between desktop and mobile -->
 <!-- Make everything more responsive-->
