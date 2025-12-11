@@ -1,12 +1,17 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html {
+  box-sizing: border-box;
   scroll-behavior: smooth;
-  scroll-margin-top: 200px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
@@ -41,6 +46,7 @@ h1 {
 h2 {
   color: #B8F3FF;
   font-size: clamp(1.2rem, 2vw + 0.5rem, 1.5rem);
+  cursor: default;
 }
 
 h2::after {
@@ -124,14 +130,14 @@ h2:hover::after {
   width: fit-content;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-links a {
   display: block;
   padding: 10px;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: clamp(0.9rem, 1vw + 0.55rem, 1.2rem);
   color: black;
   text-decoration: none;
   transition: all 0.3 ease-in-out;
@@ -173,6 +179,7 @@ h2:hover::after {
   margin: 0 auto;
   padding: 4rem;
   text-align: center;
+  scroll-margin-top: 200px;
 }
 
 /* About section */
@@ -187,7 +194,7 @@ h2:hover::after {
 }
 
 #profile-pic {
-  width: clamp(150px, 30vw, 300px);
+  width: clamp(150px, 30vw, 250px);
   height: auto;
   border-radius: 5%;
   object-fit: cover;
@@ -197,7 +204,7 @@ h2:hover::after {
 .innerContainer p {
   flex: 1;
   max-width: 60ch;
-  font-size: clamp(0.2rem, 1.3vw + 0.5rem, 1.2rem);
+  font-size: clamp(0.9rem, 1vw + 0.55rem, 1.2rem);
   line-height: 1.7rem;
   text-align: left;
 }
@@ -300,7 +307,8 @@ footer {
   width: fit-content;
   margin: 0 auto;
   padding-bottom: 25px;
-  font-size: 1.1rem;
+  font-size: clamp(0.9rem, 1vw + 0.55rem, 1.2rem);
+  cursor: default;
 }
 
 .heart {
