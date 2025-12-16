@@ -275,7 +275,7 @@ h2:hover::after {
 }
 
 .project-tech-stack li{
-  padding-top: 10px;
+  padding: 10px;
   flex: 1;
 }
 
@@ -303,3 +303,7 @@ footer {
 .heart {
   color: rgb(216, 55, 55);
 }
+
+/* Fill in projects section with 6 projects */
+
+/* Work on Blog Page */
