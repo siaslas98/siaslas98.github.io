@@ -41,6 +41,7 @@ section {
 h1 {
   color: #B8F3FF;
   border-bottom: 5px solid #b1e4ee;
+  font-size: clamp(1.85rem, 6vw, 2.1rem);
 }
 
 h2 {
@@ -118,7 +119,7 @@ h2:hover::after {
 .hamburger-icon span {
   width: 100%;
   height: 2px;
-  background-color: whitesmoke;
+  background-color: #f5efefe2;
   transition: all 0.3 ease-in-out;
 }
 
@@ -126,7 +127,7 @@ h2:hover::after {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: whitesmoke;
+  background-color: #f5efef8b;
   width: fit-content;
   max-height: 0;
   overflow: hidden;
@@ -138,10 +139,15 @@ h2:hover::after {
   padding: 10px;
   text-align: center;
   font-size: clamp(0.9rem, 1vw + 0.55rem, 1.2rem);
-  color: black;
+  color: inherit;
   text-decoration: none;
   transition: all 0.3 ease-in-out;
 }
+
+.menu-links a:hover{
+  background-color: #f5efef9d;
+}
+
 
 .menu-links li {
   list-style: none;
@@ -189,16 +195,14 @@ h2:hover::after {
   align-items: flex-start;
   justify-content: center;
   gap: 2rem;
-  margin: 5rem auto;
-  max-width: 900px;
+  margin: 3rem auto;
+  width: 90%;
 }
 
 #profile-pic {
-  width: clamp(150px, 30vw, 250px);
-  height: auto;
+  max-width: 250px;
   border-radius: 5%;
-  object-fit: cover;
-  box-shadow: 5px 5px 5px #b5bad0;
+  box-shadow: 5px 5px 5px #b7c0ea;
 }
 
 .innerContainer p {
@@ -207,6 +211,7 @@ h2:hover::after {
   font-size: clamp(1rem, 1vw + 0.55rem, 1.2rem);
   line-height: 1.7rem;
   text-align: left;
+  padding: 15px;
 }
 
 .myLinksContainer {
@@ -239,7 +244,7 @@ h2:hover::after {
 }
 
 .project-cards{
-  margin: 0 auto;
+  margin: 15px auto;
   display: grid;
   grid-template-columns: repeat(3, minmax(15vw, 500px));
   grid-auto-rows: minmax(300px, auto);
@@ -248,9 +253,15 @@ h2:hover::after {
 
 .card {
   border-radius: 3%;
-  border: 2px solid #B8F3FF;
+  /* border: 2px solid #B8F3FF; */
   padding: 20px;
-  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  color: #3a393b;
+  /* overflow: scroll; */
 }
 
 .project-header {
@@ -260,6 +271,7 @@ h2:hover::after {
 .project-paragraph{
   text-align: left;
   margin: 10px;
+  min-height: 8rem;
 }
 
 .project-tech-stack ul{
@@ -279,13 +291,10 @@ h2:hover::after {
   flex: 1;
 }
 
-.project-link{
+.project-link {
   padding: 10px;
   margin: 20px auto;
   width: fit-content;
-}
-
-.project-link a{
   color: inherit;
   text-decoration: none;
 }
