@@ -1,9 +1,8 @@
 @media (max-width: 1430px) {
   .project-cards{
-    display: flex;
-    flex-direction: column;
-    width: 40vw;
+    grid-template-columns: minmax(30%, 600px);
   }
+
 }
 
 @media (max-width: 1110px){
@@ -64,6 +63,10 @@
     width: clamp(100px, 50vw + 0.3rem, 180px);
   }
 
+  .container {
+    padding: 2rem;
+  }
+
   .innerContainer p {
     font-size: clamp(1rem, 1vw + 0.5rem, 1.2rem);
     line-height: 1.65rem;
@@ -78,4 +81,3 @@
   }
 }
 
- 

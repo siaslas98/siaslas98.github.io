@@ -16,8 +16,8 @@ html {
 
 body {
   font-family: "Poppins";
-  background-color: hsla(215, 60%, 4%, 0.9);
-  color: whitesmoke;
+  background-color: #040910e6;
+  color: #f5f5f5;
 }
 
 header {
@@ -66,7 +66,12 @@ h2:hover::after {
   transform: scaleX(1);
 }
 
-/* Nav-bar */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Nav */
 
 .desktop-nav {
   margin-right: 10rem;
@@ -79,7 +84,6 @@ h2:hover::after {
 }
 
 .desktop-nav a {
-  text-decoration: none;
   font-size: 1.2em;
   color: #9590A8;
 }
@@ -93,7 +97,7 @@ h2:hover::after {
   transition: all ease-in-out .2s;
 }
 
-.desktop-nav a:hover:after {
+.desktop-nav a:hover::after {
   width: 100%;
 }
 
@@ -140,14 +144,12 @@ h2:hover::after {
   text-align: center;
   font-size: clamp(0.9rem, 1vw + 0.55rem, 1.2rem);
   color: inherit;
-  text-decoration: none;
   transition: all 0.3 ease-in-out;
 }
 
 .menu-links a:hover{
   background-color: #f5efef9d;
 }
-
 
 .menu-links li {
   list-style: none;
@@ -201,8 +203,8 @@ h2:hover::after {
 
 #profile-pic {
   max-width: 250px;
-  border-radius: 5%;
-  box-shadow: 5px 5px 5px #b7c0ea;
+  border-radius: 8px;
+  box-shadow: 5px 5px 3px #b7c0ea;
 }
 
 .innerContainer p {
@@ -211,24 +213,19 @@ h2:hover::after {
   font-size: clamp(1rem, 1vw + 0.55rem, 1.2rem);
   line-height: 1.7rem;
   text-align: left;
-  padding: 15px;
+  padding: 10px;
 }
 
 .myLinksContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 
 .icons {
   flex: 0 0 auto;
   margin: 0;
-}
-
-.myLinksContainer a {
-  color: inherit; 
-  text-decoration: none;
 }
 
 .myLinksContainer a:hover {
@@ -244,16 +241,15 @@ h2:hover::after {
 }
 
 .project-cards{
-  margin: 15px auto;
   display: grid;
   grid-template-columns: repeat(3, minmax(15vw, 500px));
   grid-auto-rows: minmax(300px, auto);
   gap: 1rem;
+  margin: 15px auto;
 }
 
 .card {
-  border-radius: 3%;
-  /* border: 2px solid #B8F3FF; */
+  border-radius: 7px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -261,7 +257,6 @@ h2:hover::after {
   gap: 10px;
   background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
   color: #3a393b;
-  /* overflow: scroll; */
 }
 
 .project-header {
@@ -312,7 +307,3 @@ footer {
 .heart {
   color: rgb(216, 55, 55);
 }
-
-/* Fill in projects section with 6 projects */
-
-/* Work on Blog Page */
