@@ -20,7 +20,7 @@ body {
   color: #f5f5f5;
 }
 
-header {
+header, .blog-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -28,6 +28,7 @@ header {
   top: 0;
   z-index: 10;
   padding: 2em 4em;
+  gap: 20px;
 }
 
 header > h1:first-child{
@@ -86,6 +87,7 @@ a {
 .desktop-nav a {
   font-size: 1.2em;
   color: #9590A8;
+  margin-top: 50px;  
 }
 
 .desktop-nav a:after {
@@ -99,6 +101,10 @@ a {
 
 .desktop-nav a:hover::after {
   width: 100%;
+}
+
+.desktop-nav i{
+  padding-top: 15px;
 }
 
 /* Hamburger nav */
@@ -307,3 +313,55 @@ footer {
 .heart {
   color: rgb(216, 55, 55);
 }
+
+/* Blogs */
+
+.blog-header {
+  position: static;
+}
+
+.blog-list-container{
+  min-height: 100vh;
+}
+
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  margin: 0 auto;
+  list-style: none;
+  gap: 10px;
+  overflow: scroll;
+}
+
+.blog-list li {
+  font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
+  background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  border-radius: 7px;
+  padding: 15px;  
+}
+
+.blog-link {
+  font-weight: 500;
+  color: #3a393b
+}
+
+#scroll-to-header{
+  position: fixed;
+  top: 50vh;
+  right: 10vw;
+}
+
+#scroll-to-header i {
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
