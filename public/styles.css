@@ -365,3 +365,12 @@ footer {
   }
 }
 
+/* Blog */
+
+.post h1 {
+  color: #B8F3FF;
+  border-bottom: 5px solid #b1e4ee;
+  /* font-size: clamp(1.85rem, 6vw, 2.1rem); */
+  font-size: 50px;
+}
+
