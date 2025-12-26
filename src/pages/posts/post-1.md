@@ -1,6 +1,6 @@
 ---
 layout: ../../../layouts/PostLayout.astro
-title: 'My First Blog Post'
+title: 'Learning with ADHD'
 pubDate: 2025-07-01
 description: 'This is the first post of my new Astro blog.'
 author: 'Astro Learner'
@@ -9,20 +9,5 @@ image:
     alt: 'The Astro logo on a dark background with a pink glow.'
 tags: ["astro", "blogging", "learning in public"]
 ---
-# My First Blog Post
 
-Published on: 2022-07-01
-
-Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
-
-## What I've accomplished
-
-1. **Installing Astro**: First, I created a new Astro project and set up my online accounts.
-
-2. **Making Pages**: I then learned how to make pages by creating new `.astro` files and placing them in the `src/pages/` folder.
-
-3. **Making Blog Posts**: This is my first blog post! I now have Astro pages and Markdown posts!
-
-## What's next
-
-I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.
+Jesus Christ is a figure of compassion, humility, and self-giving love. His life and teachings emphasize mercy over judgment, service over power, and love even in the face of suffering. Through parables and actions alike, he pointed people toward forgiveness, care for the poor, and faithfulness to what is good and true. For countless people across history, his example has been a source of hope, moral clarity, and enduring inspiration.

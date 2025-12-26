@@ -1,0 +1,26 @@
+---
+const {title} = Astro.props;
+---
+
+<header>
+  <h1>{title}</h1>  
+  <nav class="desktop-nav">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/blog">Blog</a></li>
+    </ul>
+  </nav>
+  <nav class="hamburger-nav">
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="/" onclick="toggleMenu()">Home</a></li>
+        <li><a href="/blog" onclick="toggleMenu()">Blog</a></li>
+      </div>
+    </div>
+  </nav>
+</header>
