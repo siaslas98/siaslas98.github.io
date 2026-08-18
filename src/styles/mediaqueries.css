@@ -44,8 +44,8 @@
     width: clamp(150px, 50vw + 0.2rem, 180px);
   }
 
-  .innerContainer p {
-    font-size: clamp(1rem, 1vw + 0.8rem, 1.2rem);
+  .about-text p {
+    font-size: 1rem;
     line-height: 1.65rem;
   }
 
@@ -67,8 +67,8 @@
     padding: 2rem;
   }
 
-  .innerContainer p {
-    font-size: clamp(1rem, 1vw + 0.5rem, 1.2rem);
+  .about-text p {
+    font-size: 1rem;
     line-height: 1.65rem;
   }
 
